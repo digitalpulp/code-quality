@@ -1,0 +1,24 @@
+-   repo: https://github.com/pre-commit/pre-commit-hooks.git
+    sha: v0.9.2
+    hooks:
+    -   id: check-yaml
+        files: \.(yaml|yml)$
+        stages:
+        - commit
+-   repo: https://github.com/digitalpulp/pre-commit-php.git
+    sha: 1.3.0
+    hooks:
+    -   id: php-lint-all
+        files: \.(php|module|inc|install|profile|theme)$
+        stages:
+        - commit
+    -   id: php-cs
+        stages:
+        - commit
+        files: \.(php|module|inc|install|profile|theme)$
+-   repo: git://github.com/pre-commit/mirrors-eslint
+    sha: v4.5.0
+    hooks:
+    -   id: eslint
+        stages:
+        - commit
