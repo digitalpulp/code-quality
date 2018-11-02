@@ -18,8 +18,8 @@ RUN chmod ugo=rx /usr/local/bin/pre-commit.sh \
    && php -r "unlink('composer-setup.php');" \
    && mv composer.phar /usr/local/bin/composer \
    && composer global require drupal/coder \
-   && ln -s /root/.composer/vendor/squizlabs/php_codesniffer/scripts/phpcs /usr/local/bin/phpcs \
-   && ln -s /root/.composer/vendor/squizlabs/php_codesniffer/scripts/phpcbf /usr/local/bin/phpcbf \
+   && ln -s /root/.composer/vendor/squizlabs/php_codesniffer/bin/phpcs /usr/local/bin/phpcs \
+   && ln -s /root/.composer/vendor/squizlabs/php_codesniffer/bin/phpcbf /usr/local/bin/phpcbf \
    && pip install --upgrade pip setuptools \
    && pip install pre-commit \
    && cd /root/pre-commit \
